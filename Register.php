@@ -4,7 +4,7 @@
         header("Location: index.php");
     }
 
-    if(isset($_REQUEST)) 
+    if(!empty($_REQUEST)) 
     {
         require_once 'functions.php';  
         $message = "";

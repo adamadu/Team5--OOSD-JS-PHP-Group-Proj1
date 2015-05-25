@@ -271,7 +271,7 @@ h4{
 
 }
 
-#register td, #register input{
+#register td:not(#errorMessage), #register input{
     text-align: left;
 }
 .wrap .container table th h2{
