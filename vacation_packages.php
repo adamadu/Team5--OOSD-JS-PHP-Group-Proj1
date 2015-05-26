@@ -124,9 +124,24 @@
                                        print ("\"" . $BasePrice_array[$i] . "\",");
                                     }
                                     print ("\"" . $BasePrice_array[$i] . "\"];");
-
-
                                     print("\r\n document.getElementById('BasePrice').value = BasePrice[index_value -1];");
+									
+									// Check if start date is less than current date
+									
+									print("\r\n var today = new Date();");
+	
+									print("\r\n var secondValue = document.getElementById('PkgStartDate').value;");
+		
+									print("\r\n var secondValue = secondValue.substring(0,10);");
+		
+									print("\r\n var secondValue = secondValue.split('-');");
+									print("\r\n var secondDate = new Date(secondValue[0],secondValue[1]-1,secondValue[2]);");
+	
+							echo ("if (today > secondDate) " 
+								. "{"   
+								. " document.getElementById('PkgStartDate').className = \"startDateMessage \"; }"
+								. " else { document.getElementById('PkgStartDate').className = \"\";}"
+								);
 
                                     print("\r\n  } ");
                                     print("\r\n  </script>");

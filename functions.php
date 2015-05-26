@@ -1,7 +1,7 @@
 <?php 
 /*
  * Place to store all php functions. 
- */    
+*/    
 
     //Adam - Just a function to make life eaiser whenever we need to output array
     function pre($value) {
@@ -257,7 +257,7 @@
 
     function package_list(&$pkgName, &$pkgDesc, &$pkgStartDate, &$pkgEndDate, &$BasePrice)
     {
-        $sql = "select * from packages";
+        $sql = "select * from packages where pkgEndDate >= now();";
         $result = Database::selectQuery($sql);
         
         $pkgName = array();
