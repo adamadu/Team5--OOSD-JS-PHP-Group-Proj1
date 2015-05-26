@@ -187,7 +187,46 @@ h4{
     margin-top: 50px;
 }
 
+.content .container {
+    border-left: 3px solid #0099FF;
+    border-right: 3px solid #0099FF;
+    padding: 0 10px;
+    
+}
 
+.content .container .aboutcontainer{
+    overflow: hidden;
+    border-top: 3px solid #0099FF;
+    padding-top: 10px;
+   /* position: relative;*/
+}
+.aboutcontainer div {
+    margin: 10px 0;
+}
+
+.aboutimage {
+   /* display: inline-block;*/
+    width: 20%;
+    min-width: 220px;
+    float: left;
+}
+
+.abouttext {
+    float: left;
+    padding:0 20px;
+    width: 73%;
+    
+}
+
+.abouttext h2{
+    margin:0;
+}
+.content .container .aboutcontainer img{
+    width: 100%;
+}
+.textbg {
+    background-color: rgba(0, 0, 0, 0.3);
+}
 /*
 * ------ END `CONTENT` CONTENT STYLING ------
 */
@@ -222,10 +261,17 @@ h4{
 * ------ START `REGISTER PAGE` CONTENT STYLING ------
 */
 
+#googleMap {
+    margin-top: 20px;
+    width: 40%;
+    height:320px; 
+    float:left; 
+    min-width: 400px;
+}
+
 .agency {
-   display: inline-block;
-   //padding-right: 50px;
-   width: 40%;
+   width: 50%;
+   float: left;
 }
 .wrap {
     background: url(images/banner2.jpg);
@@ -358,6 +404,23 @@ h4{
     }
     table {
         font-size: 12px;
+    }
+    
+    .aboutimage {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
+    .aboutimage img{
+        max-width: 200px;
+    }
+    .abouttext {
+        float: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
     }
 }
 /**At 800 width, center the all the elemnts in the header*/

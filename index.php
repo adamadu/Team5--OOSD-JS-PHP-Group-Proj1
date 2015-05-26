@@ -33,9 +33,9 @@
             </div>
          <div class="slider">
             <ul class="bxslider">
-                <li><h2>Test1</h2><p>"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."</p></li>
-                <li><h2>Test2</h2></li>
-                <li><h2>Test3</h2></li>
+                <li><h2>Highlight Review 1</h2><p>"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."</p></li>
+                <li><h2>Highlight Review 2</h2><p>"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."</p></li>
+                <li><h2>Highlight Review 2</h2><p>"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."</p></li>
               </ul>
             <script>
                 $('.bxslider').bxSlider({
@@ -49,6 +49,27 @@
         <div class="content">
             <div class="container">
                 <h1>About Us:</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div class="aboutcontainer">
+                    <div class='aboutimage'> <img src="images/piggy-bank.jpg"> </div>
+                    <div class='abouttext'>
+                        <h2>Affordable Packages</h2>
+                        <p>With our ongoing special offers on packages, booking the perfect trip won't break the bank. </p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                 </div>    
+                  <div class="aboutcontainer">  
+                    <div class='aboutimage'> <img src="images/beach-girl.jpg"> </div>              
+                    <div class='abouttext'>
+                        <h2>Plan your dream Vacation</h2>
+                        <p> Browse our packages and plan your trip just the way you want to. </p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                  </div>   
+               
+               <!-- <div class="aboutimage">
+                    <img src="images/beach-girl.jpg">
+                </div>-->
             </div>
         </div>
     </body>
