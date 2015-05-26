@@ -1,8 +1,4 @@
 
-login page error message div adjustment
-
-ALL error message color change to red
-
 dynamically generate google maps for contact page
 
 add fucntionality for viewing other information in profile page
@@ -10,10 +6,6 @@ add fucntionality for viewing other information in profile page
 chnage header to include all the css and js. Add nav file for the navigation
 
 Add package information or additional pictures to the index page
-
-Profile page - make links distigusable
-
-maybe remove table form set width
 
 current page always highlited in header
 
