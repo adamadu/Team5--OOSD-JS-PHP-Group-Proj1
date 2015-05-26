@@ -6,7 +6,7 @@
     <head>
         <title> Travel Experts - Contact Us</title> 
         
-        <link rel="stylesheet" href="style.css" type="text/css"/>
+      
         
         <script src="http://maps.googleapis.com/maps/api/js"></script>
         <script>
@@ -27,6 +27,7 @@
             }
             google.maps.event.addDomListener(window, 'load', initialize);
         </script>
+          <link rel="stylesheet" href="style.css" type="text/css"/>
     </head>
     
     <body>
@@ -60,7 +61,8 @@
                     }
                     echo("                            
                         <div class='container'>
-                            <div class='agency'>
+                            <div class='agencymap'>
+                                <div class='agency'>
                                 <table>
                                     <tr>
                                         <th colspan='2'><h2> Agency #". $value['AgencyId'] . "</h2></th>
@@ -95,7 +97,9 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div id='googleMap' style='width:300px;height:320px; display: inline-block; margin-bottom: 20px;'></div>
+                            <div id='googleMap'></div>
+                            <div style='clear:both'></div>
+                            </div>
                             <div class='agents'>
                                 <table>
                                     <tr>
