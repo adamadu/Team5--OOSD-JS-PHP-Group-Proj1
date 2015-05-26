@@ -336,7 +336,19 @@ h4{
 * ------ END `REGISTER PAGE` CONTENT STYLING ------
 */
 
+/*
+* ------ START `PACKAGES PAGE` CONTENT STYLING ------
+*/
 
+.startDateMessage {
+	color: red;
+    font-weight: bold;
+	
+}
+
+/*
+* ------ END `PACKAGES PAGE` CONTENT STYLING ------
+*/
 
 /*
 * ------ START `RESPONSIVE MEDIA QUERIES` ------
