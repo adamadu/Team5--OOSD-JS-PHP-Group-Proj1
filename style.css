@@ -197,6 +197,7 @@ h4{
 .content .container .aboutcontainer{
     overflow: hidden;
     border-top: 3px solid #0099FF;
+ 
     padding-top: 10px;
    /* position: relative;*/
 }
@@ -282,6 +283,7 @@ h4{
     background-color: rgba(153, 204, 255, 0.35);
     padding: 10px;
     text-align: center;
+      border: 1px solid black;
 }
 
 
@@ -349,6 +351,14 @@ h4{
 /*
 * ------ END `PACKAGES PAGE` CONTENT STYLING ------
 */
+
+.footer {
+    background-color: black;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
 
 /*
 * ------ START `RESPONSIVE MEDIA QUERIES` ------

@@ -73,13 +73,20 @@
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
                   </div>   
-               
+                     <div class="aboutcontainer">  
+                    <div class='aboutimage'> <img src="images/call-icon.png"> </div>              
+                    <div class='abouttext'>
+                        <h2>Live Customer Service</h2>
+                        <p> If you have any questions or concerns, don't hesitate to give us a call! </p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>   
                <!-- <div class="aboutimage">
                     <img src="images/beach-girl.jpg">
                 </div>-->
             </div>
         </div>
-        
+
        <?php
        require_once 'footer.php';
        ?>
