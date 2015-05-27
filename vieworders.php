@@ -1,3 +1,12 @@
+<!--
+ * View Orders Page
+ * Allows the customer to view their current and previous orders. 
+ *
+ * Written by: Adam - 23-May
+ * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
+-->
+
+
 <!DOCTYPE html>
 <?php
     session_start();
@@ -100,6 +109,8 @@
                 </table>
             </div>
         </div>
-            
+        <?php
+            require 'footer.php';
+        ?>    
     </body>
 </html>

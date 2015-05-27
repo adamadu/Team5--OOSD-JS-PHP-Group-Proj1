@@ -1,9 +1,9 @@
 <?php
 /*
- * @author Adam Robinson - May 20-2015
- * I wrote this helper database class to avoid re-typing
- * mysqli connection information everytime we need to query the database.
- * I decided to make this all static (cannot instantiate)
+ * Written by Adam Robinson - May 20-2015
+ * I wrote this helper database class to avoid re-typing mysqli connection information everytime we need to query the database.
+ * This class is pure static (cannot instantiate)
+ * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
  */
 class Database {
     private static $host = "localhost";
@@ -25,7 +25,11 @@ class Database {
     private static function closeConn($connection) {
         mysqli_close($connection);
     }
-       
+    
+    /*
+     * This function will (1)open a connection (2)run a select query on the database
+     * (3) Return the result as an assosiative array (4) close the connection
+     */
     public static function selectQuery($queryString) {
         $connection = self::connect();
         $return = null;
@@ -45,7 +49,11 @@ class Database {
         return $return;
     }
     
-    //Cannot insert prepared statements
+    /*
+     * This function will (1)open a connection (2)run an INSERT or UPDATE query on the database
+     * (3) Return the result as true(it was sucessfull) or false (unsucessfull) (4) close the connection
+     */
+    //Note - Cannot insert prepared statements
     public static function insertQuery($queryString) {
         $connection = self::connect();
         $return = false;

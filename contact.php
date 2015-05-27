@@ -1,13 +1,17 @@
+<!--
+ * Contact Page - All information is dynamically generated from the database
+ * Note: Google maps is currently not being dynamically generated.
+ * Written by: Adam - 18 May
+ * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
+-->
+
 <?php
     session_start();
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Travel Experts - Contact Us</title> 
-        
-      
-        
+        <title> Travel Experts - Contact Us</title>    
         <script src="http://maps.googleapis.com/maps/api/js"></script>
         <script>
             function initialize() {
@@ -27,9 +31,8 @@
             }
             google.maps.event.addDomListener(window, 'load', initialize);
         </script>
-          <link rel="stylesheet" href="style.css" type="text/css"/>
-    </head>
-    
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    </head> 
     <body>
         <?php
             require_once 'header.php';
@@ -38,10 +41,9 @@
         <div class="pages_heading">
             <div class="container"><h1> CONTACT US: </h1></div>
         </div>
-        <div class='wrap'>
-            
+        <div class='wrap'>          
         <?php
-        require_once 'functions.php';
+            require_once 'functions.php';
             if (getAgencies() != null) {
                 
                 $agencies = getAgencies();
@@ -121,5 +123,8 @@
             }
         ?>
         </div>
+        <?php
+            require 'footer.php';
+        ?>
     </body>
 </html>

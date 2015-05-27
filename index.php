@@ -1,3 +1,10 @@
+<!--
+ * Main page that the customer first sees
+ * Written by: Adam - Last edited: 26-May
+ * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
+-->
+
+
 <?php
     session_start();
 ?>
@@ -72,5 +79,9 @@
                 </div>-->
             </div>
         </div>
+        
+       <?php
+       require_once 'footer.php';
+       ?>
     </body>
 </html>

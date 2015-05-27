@@ -1,3 +1,11 @@
+<!--
+ * Profile Page
+ * The page that is displayed after successful login
+ * As of right now, this page only displays options. It has no functionally yet other than the view current orders/order history link.
+ * Written by: Adam - Last edited: 24-May
+ * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
+-->
+
 <!DOCTYPE html>
 <?php
     session_start();
@@ -34,6 +42,8 @@
                 </div>
             </div>
         </div>
-        
+        <?php
+            require 'footer.php';
+        ?>
     </body>
 </html>

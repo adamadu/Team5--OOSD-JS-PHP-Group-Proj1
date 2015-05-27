@@ -1,3 +1,11 @@
+<!--
+ * Order Page
+ * This is the page the customer sees after they click book now in the packages page. 
+ * It displays all the necessary information and allows the customer to enter their CC info here
+ * Written by: Adam - Last edited: 24-May
+ * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
+-->
+
 <?php
     session_start();
     require_once 'functions.php';
@@ -79,5 +87,8 @@
                 </form> 
             </div>
         </div>
+        <?php
+            require 'footer.php';
+        ?>
     </body>
 </html>

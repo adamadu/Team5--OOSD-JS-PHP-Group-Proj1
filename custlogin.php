@@ -1,3 +1,11 @@
+<!--
+ * Customer Login Page
+ * Allows the customer to login using the username and password that they registered with
+ * Written by: Adam - 18 May
+ * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
+-->
+
+
 <?php
     session_start();
     if(isset($_SESSION['loggedin_user'])) {
@@ -38,24 +46,24 @@
                             <th>Username: </th>
                             <td> <input type="text" name="username"/> </td>
                         </tr>
-
                          <tr>
                             <th>Password: </th>
                             <td> <input type="password" name="password"/> </td>
-                        </tr>
-                        
+                        </tr>                        
                         <?php
                             if(isset($message)) {
                                 echo("<rr><td colspan='2' class='errmessage'>$message</td></tr>");
                             }
-                        ?>
-                        
-                       
+                        ?>                      
                     </table>                
                     <div class="center"> <input type="submit" value="Login" />   </div>
                 </form>
                 <div class="lightbackground"> <a href="Register.php"><h4>Don't have an account? Click here to register!</h4></a> </div>
             </div>
         </div>
+        
+        <?php
+            require_once 'footer.php';
+        ?>
     </body>
 </html>

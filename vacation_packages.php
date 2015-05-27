@@ -1,3 +1,12 @@
+<!--
+ * Vacation Package selection page
+ * Allows the customer to select which package they would like to order. Dynamically created and validated for start/end dates.
+ *
+ * Written by: Tuan - 18-May - Last Edited: 26-May
+ * Last edited by Adam: 24-May (I added the session information)
+ * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
+-->
+
 <?php
     session_start();
     require_once 'functions.php';
@@ -150,6 +159,9 @@
                                 ?>
         </div>
     </div>
+    <?php
+        require_once 'footer.php';
+    ?>
 </body>
 
 </html>

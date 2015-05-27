@@ -1,3 +1,12 @@
+<!--
+ * Customer Registration Page
+ * Allows the customer to create an account
+ *
+ * Written by: Sam - 18-May
+ * Last edited by Adam: 24-May (i added the session/actual login functionality
+ * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
+-->
+
 <?php
     session_start();
     if(isset($_SESSION['loggedin_user'])) {
@@ -131,8 +140,12 @@
                         <input type="submit"  value="Register" onclick="return jsValidate()" />
                         <input type="reset"  value="Reset" onclick="return confirm('Are you sure you want to reset all the fields?')"		
                     </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
+        <?php
+            require 'footer.php';
+        ?>
     </body>
 </html>

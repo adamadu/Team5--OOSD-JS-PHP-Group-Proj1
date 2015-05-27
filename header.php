@@ -1,3 +1,10 @@
+<!--
+ * Header/Nav
+ * This is the main top navigation and main logo - Should be included in every file that the client sees 
+ * Written by: Adam - Last edited: 21-May
+ * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
+-->
+
 <?php
 
     if(!isset($_SESSION['loggedin_user'])) {

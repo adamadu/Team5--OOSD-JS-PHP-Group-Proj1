@@ -1,3 +1,9 @@
+/*
+ * Regist form javascript validation
+ * Written by: Sam - 18 May
+ * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
+ */
+
 function jsValidate() 
 {
     var message = "";
@@ -23,7 +29,7 @@ function jsValidate()
     {
         message += "Province required <br/>";
     }
-    if (custRegForm.CustPostal.value.trim() == "") 4
+    if (custRegForm.CustPostal.value.trim() == "")
     {
         message += "Postal Code required <br/>";
     }
