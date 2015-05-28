@@ -2,7 +2,7 @@
  * Order Page
  * This is the page the customer sees after they click book now in the packages page. 
  * It displays all the necessary information and allows the customer to enter their CC info here
- * Written by: Adam - Last edited: 24-May
+ * Written by: Adam - Last edited: 28-May
  * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
 -->
 
@@ -15,16 +15,29 @@
     $packageinfo = getPackageByPackageId($_SESSION['slcpkgid']);
     if(count($_POST) > 0) {
         $message = "";
-        if(empty($_POST['CCName']) || $_POST['CCNumber'] == "" || $_POST['CCExpiry'] == "") {
-            $message .= "Credit Card type, number or expiration date field is empty <br/>";         
+        pre($_POST);
+        if(empty($_POST['CCName']) || $_POST['CCNumber'] == "" || $_POST['CCExpiry'] == "" || $_POST['TripStart'] == "" || $_POST['TripEnd'] == "") {
+            $message .= "Credit Card type, number, trip start, trip end or expiration date field is empty <br/>";         
             if(!preg_match('/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/',$_POST['CCExpiry'])) {
                 $message .= "Please enter the proper YYYY-MM-DD format for credit card expiration date <br/>";
+            }
+            if(!preg_match('/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/',$_POST['TripStart'])) {
+                $message .= "Please enter the proper YYYY-MM-DD format for Trip Start date <br/>";
+            }
+            if(!preg_match('/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/',$_POST['TripEnd'])) {
+                $message .= "Please enter the proper YYYY-MM-DD format for Trip End date <br/>";
+            }  
+            if($_POST['TripStart'] < date("Y-m-d H:i:s")) {
+                $message .= "Error in start date: It is before todays date. Please enter a date after todays date <br/>";
+            }   
+            if($_POST['TripEnd'] < $_POST['TripStart']) {
+                $message .= "Error in trip end date: It is before trip start date. Please enter a valid end date <br/>";    
             }
         } else {
             insertCreditCard($_POST['CCName'], $_POST['CCNumber'], $_POST['CCExpiry'], getCustomerIdByUsername($_SESSION['loggedin_user']));
             $newbooking = insertNewBooking(rand(), getCustomerIdByUsername($_SESSION['loggedin_user']), $_SESSION['slcpkgid']);
             if($newbooking != null) {
-                insertNewBookingDetail(rand(), $packageinfo['PkgStartDate'], $packageinfo['PkgEndDate'], $packageinfo['PkgDesc'], "", $packageinfo['PkgBasePrice'], $packageinfo['PkgAgencyCommission'], getLastBookingIdByCustomerId(getCustomerIdByUsername($_SESSION['loggedin_user']))['BookingId']);
+                insertNewBookingDetail(rand(), $_POST['TripStart'], $_POST['TripEnd'], $packageinfo['PkgDesc'], "", $packageinfo['PkgBasePrice'], $packageinfo['PkgAgencyCommission'], getLastBookingIdByCustomerId(getCustomerIdByUsername($_SESSION['loggedin_user']))['BookingId']);
                 unset($_SESSION['slcpkgid']);
                 header("Location: vieworders.php"); 
             }
@@ -68,8 +81,10 @@
                                 ."<tr><th colspan='2'><h3>Package Details:</h3></th>"
                                 ."<tr><th>Selected Package:</th><td>".$packageinfo['PkgName']."</td></tr>"
                                 ."<tr><th>Package Detail:</th><td>".$packageinfo['PkgDesc']."</td></tr>"
-                                ."<tr><th>Package Start Date:</th><td>".$packageinfo['PkgStartDate']."</td></tr>"
-                                ."<tr><th>Package End Date:</th><td>".$packageinfo['PkgEndDate']."</td></tr>"    
+                               // ."<tr><th>Package Start Date:</th><td>".$packageinfo['PkgStartDate']."</td></tr>"
+                               // ."<tr><th>Package End Date:</th><td>".$packageinfo['PkgEndDate']."</td></tr>"    
+                                ."<tr><th>Trip Start Date:</th><td><input type='date' name='TripStart'>(YYYY-MM-DD)</td></tr>"
+                                ."<tr><th>Trip End Date:</th><td><input type='date' name='TripEnd'>(YYYY-MM-DD)</td></tr>"  
                                 ."<tr><th>Package Price:</th><td>$".$packageinfo['PkgBasePrice']."</td></tr>"        
                                     
                                 ."<tr><th colspan='2'><h3>Payment Details:</h3></th>");              

@@ -2,7 +2,7 @@
  * Profile Page
  * The page that is displayed after successful login
  * As of right now, this page only displays options. It has no functionally yet other than the view current orders/order history link.
- * Written by: Adam - Last edited: 24-May
+ * Written by: Adam - Last edited: 28-May
  * OOSD APR 23 2015 - Threaded Project Workshop 1 - Team 5
 -->
 
@@ -32,7 +32,7 @@
         <div class="wrap">
             <div class="container">
                 <div class="lightbackground">
-                    <ul> <h2> This is your account profile. You can view and edit your account details here </h2>
+                    <ul> <?php echo "<h1> Welcome ". $_SESSION['loggedin_user'] ."!</h1>"?><h2> This is your account profile. You can view and edit your account details here </h2>
                         <li>Click here to View/Edit personal information</li>
                         <li>Click here to View/Edit billing details</li>
                         <li><a href="vieworders.php">Click here to View your current orders/order history</a> </li>
