@@ -65,7 +65,7 @@
                                     <th>Booking No.</th>
                                     <th>Booking Date</th>
                                     <th>Description</th>
-                                    <th>Destination</th>
+                                   
                                     <th>Trip Start (YYYY/MM/DD)</th>
                                     <th>Trip End (YYYY/MM/DD)</th>
                                 </tr>";
@@ -75,7 +75,7 @@
                                 foreach($test as $tkey => $tvalue) {
                                     echo "<tr> <td>". $tvalue['BookingNo'] ."</td> <td>".$tvalue['BookingDate']."</td>";
                                 }
-                                echo "<td>".$cvalue['Description']."</td><td>".$cvalue['Destination']."</td><td>".chop($cvalue['TripStart'], "00:00:00")."</td><td>".chop($cvalue['TripEnd'], "00:00:00")."</td></tr>";
+                                echo "<td>".$cvalue['Description']."</td><td>".chop($cvalue['TripStart'], "00:00:00")."</td><td>".chop($cvalue['TripEnd'], "00:00:00")."</td></tr>";
                             }
                         } else {
                             echo "<tr><th>You dont have any current bookings</th></tr>";
@@ -90,7 +90,7 @@
                                     <th>Booking No.</th>
                                     <th>Booking Date</th>
                                     <th>Description</th>
-                                    <th>Destination</th>
+                                    
                                     <th>Trip Start (YYYY/MM/DD)</th>
                                     <th>Trip End (YYYY/MM/DD)</th>
                                 </tr>";
@@ -100,7 +100,7 @@
                                 foreach($test as $tkey => $tvalue) {
                                     echo "<tr> <td>". $tvalue['BookingNo'] ."</td> <td>".$tvalue['BookingDate']."</td>";
                                 }
-                                echo "<td>".$cvalue['Description']."</td><td>".$cvalue['Destination']."</td><td>".chop($cvalue['TripStart'],"00:00:00")."</td><td>".chop($cvalue['TripEnd'],"00:00:00")."</td></tr>";
+                                echo "<td>".$cvalue['Description']."</td><td>".chop($cvalue['TripStart'],"00:00:00")."</td><td>".chop($cvalue['TripEnd'],"00:00:00")."</td></tr>";
                             }
                         } else {
                              echo "<tr><th>You dont have any previous bookings</th></tr>";
